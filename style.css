@@ -17,9 +17,10 @@ html{scroll-behavior:smooth}
 body{
   margin:0;
   font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Apple Color Emoji","Segoe UI Emoji";
-  background: radial-gradient(1200px 600px at 20% -10%, rgba(78,161,255,.25), transparent 60%),
-              radial-gradient(900px 500px at 90% 10%, rgba(110,231,183,.18), transparent 55%),
-              var(--bg);
+  background:
+    radial-gradient(1200px 600px at 20% -10%, rgba(78,161,255,.25), transparent 60%),
+    radial-gradient(900px 500px at 90% 10%, rgba(110,231,183,.18), transparent 55%),
+    var(--bg);
   color:var(--text);
   line-height:1.6;
 }
@@ -83,11 +84,11 @@ a{color:inherit}
   background:
     radial-gradient(900px 420px at 15% -10%, rgba(78,161,255,.22), transparent 55%),
     radial-gradient(900px 420px at 85% 0%, rgba(110,231,183,.14), transparent 60%),
-    linear-gradient(rgba(0,0,0,.35), rgba(0,0,0,.35)),
-    url("https://images.unsplash.com/photo-1523419409543-a5e549c1faa9?auto=format&fit=crop&w=1600&q=80");
+    linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.55)),
+    url("Hero-transport.png");
   background-size: cover;
   background-position: center;
-  opacity: .55;
+  opacity: 1;
   pointer-events:none;
 }
 .hero > .container{ position: relative; }
@@ -128,9 +129,13 @@ h1{
   background: rgba(255,255,255,.03);
   text-decoration:none;
   font-weight:650;
-  transition: transform .08s ease, background .2s ease, border-color .2s ease;
+  transition: transform .08s ease, background .2s ease, border-color .2s ease, box-shadow .2s ease;
 }
-.btn:hover{transform: translateY(-1px); border-color: rgba(255,255,255,.18); background: rgba(255,255,255,.06)}
+.btn:hover{
+  transform: translateY(-1px);
+  border-color: rgba(255,255,255,.18);
+  background: rgba(255,255,255,.06)
+}
 .btn.primary{
   border-color: rgba(78,161,255,.45);
   background: linear-gradient(135deg, rgba(78,161,255,.35), rgba(110,231,183,.12));
@@ -169,7 +174,6 @@ h1{
   border-top:1px solid var(--line);
   border-bottom:1px solid var(--line);
 }
-
 h2{ margin:0 0 16px; font-size:28px; letter-spacing:-.01em; }
 .muted{color:var(--muted)}
 .small{font-size:13px}
@@ -179,7 +183,6 @@ h2{ margin:0 0 16px; font-size:28px; letter-spacing:-.01em; }
   grid-template-columns: repeat(12, 1fr);
   gap:14px;
 }
-
 .card{
   grid-column: span 6;
   background: var(--card);
@@ -188,7 +191,6 @@ h2{ margin:0 0 16px; font-size:28px; letter-spacing:-.01em; }
   padding:16px;
   box-shadow: var(--shadow);
 }
-
 .steps{
   display:grid;
   grid-template-columns: repeat(12, 1fr);
@@ -202,7 +204,6 @@ h2{ margin:0 0 16px; font-size:28px; letter-spacing:-.01em; }
   padding:16px;
   box-shadow: var(--shadow);
 }
-
 .card, .step{
   transition: transform .12s ease, border-color .2s ease, background .2s ease;
 }
@@ -276,5 +277,3 @@ form .btn{margin-top:10px; width:100%}
   .nav-links a{padding:8px 8px}
   .trust{grid-template-columns: 1fr}
 }
-
-
