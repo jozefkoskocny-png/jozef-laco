@@ -1,0 +1,174 @@
+:root{
+  --bg:#0b0f14;
+  --card:#0f1621;
+  --text:#e8eef6;
+  --muted:#a9b6c7;
+  --line:rgba(255,255,255,.10);
+  --accent:#4ea1ff;
+  --accent2:#6ee7b7;
+  --shadow: 0 10px 30px rgba(0,0,0,.35);
+  --radius: 18px;
+  --max: 1040px;
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Apple Color Emoji","Segoe UI Emoji";
+  background: radial-gradient(1200px 600px at 20% -10%, rgba(78,161,255,.25), transparent 60%),
+              radial-gradient(900px 500px at 90% 10%, rgba(110,231,183,.18), transparent 55%),
+              var(--bg);
+  color:var(--text);
+  line-height:1.6;
+}
+
+a{color:inherit}
+.container{max-width:var(--max); margin:0 auto; padding:0 18px}
+
+.hero{
+  padding:68px 0 40px;
+  border-bottom:1px solid var(--line);
+}
+.badge{
+  display:inline-block;
+  padding:6px 10px;
+  border:1px solid var(--line);
+  border-radius:999px;
+  color:var(--muted);
+  background: rgba(255,255,255,.03);
+  font-size:13px;
+}
+h1{
+  margin:14px 0 10px;
+  font-size:44px;
+  line-height:1.12;
+  letter-spacing:-.02em;
+}
+.lead{
+  max-width: 720px;
+  color:var(--muted);
+  font-size:18px;
+  margin:0 0 18px;
+}
+.cta{display:flex; gap:10px; flex-wrap:wrap; margin:18px 0 10px}
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:11px 14px;
+  border-radius:12px;
+  border:1px solid var(--line);
+  background: rgba(255,255,255,.03);
+  text-decoration:none;
+  font-weight:650;
+  transition: transform .08s ease, background .2s ease, border-color .2s ease;
+}
+.btn:hover{transform: translateY(-1px); border-color: rgba(255,255,255,.18); background: rgba(255,255,255,.06)}
+.btn.primary{
+  border-color: rgba(78,161,255,.45);
+  background: linear-gradient(135deg, rgba(78,161,255,.35), rgba(110,231,183,.12));
+}
+.note{
+  margin-top:12px;
+  color:var(--muted);
+  font-size:13px;
+}
+
+.section{padding:44px 0}
+.section.alt{
+  background: rgba(255,255,255,.02);
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+}
+h2{
+  margin:0 0 16px;
+  font-size:28px;
+  letter-spacing:-.01em;
+}
+.muted{color:var(--muted)}
+.small{font-size:13px}
+
+.grid{
+  display:grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap:14px;
+}
+.card{
+  grid-column: span 6;
+  background: var(--card);
+  border:1px solid var(--line);
+  border-radius: var(--radius);
+  padding:16px;
+  box-shadow: var(--shadow);
+}
+.card h3{margin:0 0 10px; font-size:18px}
+.card ul{margin:0; padding-left:18px; color:var(--muted)}
+.card li{margin:6px 0}
+.prices .card{grid-column: span 6}
+
+.steps{
+  display:grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap:14px;
+}
+.step{
+  grid-column: span 4;
+  background: var(--card);
+  border:1px solid var(--line);
+  border-radius: var(--radius);
+  padding:16px;
+  box-shadow: var(--shadow);
+}
+.num{
+  display:inline-flex;
+  width:34px; height:34px;
+  border-radius: 12px;
+  align-items:center; justify-content:center;
+  background: rgba(78,161,255,.18);
+  border:1px solid rgba(78,161,255,.35);
+  font-weight:800;
+  margin-bottom:8px;
+}
+
+.contact{
+  display:grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap:14px;
+}
+.contact .card{grid-column: span 6}
+.contact a{color: var(--accent); text-decoration:none}
+.contact a:hover{text-decoration:underline}
+
+label{display:block; font-size:13px; color:var(--muted); margin:10px 0 6px}
+input, textarea{
+  width:100%;
+  background: rgba(255,255,255,.03);
+  border:1px solid var(--line);
+  border-radius: 12px;
+  padding:11px 12px;
+  color: var(--text);
+  outline:none;
+}
+input:focus, textarea:focus{border-color: rgba(78,161,255,.5)}
+button{cursor:pointer}
+form .btn{margin-top:10px; width:100%}
+
+.legal p{margin:10px 0}
+.footer{
+  border-top:1px solid var(--line);
+  padding:26px 0;
+  color:var(--muted);
+  font-size:13px;
+}
+.footer .links{display:flex; gap:12px; flex-wrap:wrap}
+.footer .links a{color:var(--muted); text-decoration:none}
+.footer .links a:hover{color:var(--text)}
+
+@media (max-width: 880px){
+  h1{font-size:34px}
+  .card{grid-column: span 12}
+  .prices .card{grid-column: span 12}
+  .step{grid-column: span 12}
+  .contact .card{grid-column: span 12}
+}
